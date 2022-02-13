@@ -1,4 +1,3 @@
-/*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
@@ -11,17 +10,14 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-toggle','nav-menu')
 
-/*==================== REMOVER MENU MÓVEL =====================*/ 
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
-// Quando clicamos em cada nav__link, removemos a classe show-menu 
 navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== ROLAR SEÇÕES LINK ATIVO =====================*/ 
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -40,8 +36,6 @@ function scrollActive(){
     })
 }
 window.addEventListener('scroll', scrollActive)
-
-/*===== ROLAGEM DE ANIMAÇÃO DE REVELAÇÃO =====*/ 
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
